@@ -1,12 +1,12 @@
 ## Design Description
 
-I split the C files into modules by creating a separate files for the main method and the displayInfo method. The 
+I split the C files into modules by creating separate files for the main method and the displayInfo method. The 
 main method initializes variables, parses through command line arguments, and handles error cases. The command line 
 arguments are used to initialize the boolean variables (of type int, either zero or one). It then passes these 
 variables to the displayInfo method. The displayInfo method then uses these variables to decide what information it 
 needs from the proc file system. It needs to retrieve data about a specific process that will be printed at the end 
 of the method. I chose a manual approach to parsing through the cmdline file by using sscanf() and a buffer to 
-extract specific information about a process. I did this because it was convinient. It is extremely difficult to 
+extract specific information about a process. It is extremely difficult to 
 implement this feature in a way that automatically finds specific information, because formatting greatly varies 
 between different systems. I also added many error cases to help debug highly unusual outcomes. I experienced 
 problems caused by issues related to these error cases.
